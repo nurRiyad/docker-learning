@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  todo-backend:
+    build: ./todo-backend
+    container_name: todo-backend_c
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./todo-backend:/todo-backend
+      - /home/riyad/Documents/docker-test/todo-backend/node_modules
+  todo-frontend:
+    build: ./todo-frontend
+    container_name: todo-frontend_c
+    ports:
+      - "8000:8000"
